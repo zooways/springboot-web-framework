@@ -1,0 +1,17 @@
+server:
+  port: 88
+
+
+
+
+
+spring:
+  jackson:
+    serialization: { WRITE_DATES_AS_TIMESTAMPS: true }
+  datasource:
+    url: jdbc:mysql://service.aliww.cn:3306/debc?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+    username: root
+    password: root
+  redis:
+    host: service.aliww.cn
+    port: 6379
