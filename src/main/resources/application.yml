@@ -1,17 +1,39 @@
 server:
   port: 88
-
-
-
-
-
 spring:
   jackson:
     serialization: { WRITE_DATES_AS_TIMESTAMPS: true }
   datasource:
-    url: jdbc:mysql://service.aliww.cn:3306/debc?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+    url: jdbc:mysql://192.168.31.244:3306/debc?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
     username: root
-    password: root
+    password: 1804ceshi
   redis:
     host: service.aliww.cn
     port: 6379
+
+
+share:
+  downloadDomain: http://127.0.0.1:8861
+  v2ray:
+    serverName: sixsixsix.cn
+    certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIIDSzCCAjOgAwIBAgIUD7i8Yt6+fZziBNsjvp5GxUb78nkwDQYJKoZIhvcNAQEL
+      BQAwNTELMAkGA1UEBhMCQ04xEjAQBgNVBAoMCXNpeHNpeHNpeDESMBAGA1UEAwwJ
+      c2l4c2l4c2l4MB4XDTIzMDExNzA3MTUzM1oXDTMzMDExNDA3MTUzM1owNTELMAkG
+      A1UEBhMCQ04xEjAQBgNVBAoMCXNpeHNpeHNpeDESMBAGA1UEAwwJc2l4c2l4c2l4
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0bXmJwN62nrj0g38itie
+      T2tR1SF3caP+4h4nLaEzdFyOipCRL61Xqz2cSvlR1PJP8TxqwPjtdB6h4Fj7PZET
+      Qd0swngRTkduYji5iiknDEHm+htxV8kWLKUwrT/agFqrEog8fUEM9Ckfk6g8BW1A
+      ndVJeoxydPO4b/gMfkrpvpJKrAIWPRJqpCrS/UUV7vH3dMsIIMeRBWeMfzLpHrM5
+      AbfsFqrD6aTblvzzQzAlIda7UjIM0Uqpy3rZSxX1rlvTAlRb0ySCR71I5tp+cXGR
+      DqQpH2TIFOfrcnyb0SO/3bHmRAnEpoJxGFiwesBoNRVKaOi313D3x1kl82VglbDJ
+      KQIDAQABo1MwUTAdBgNVHQ4EFgQUZq1BJAQSTTpIo96Q1eAXoK8owwUwHwYDVR0j
+      BBgwFoAUZq1BJAQSTTpIo96Q1eAXoK8owwUwDwYDVR0TAQH/BAUwAwEB/zANBgkq
+      hkiG9w0BAQsFAAOCAQEAMbnfguOaKMOjRrMaULvxHZwmbwLfcA/ahDVz7Sq3HgqU
+      BT6zk/3FkxosFOHD5+sSogu26ZhHnrNGhKPQ5TntO3bNw6Idkb1k089aDZoOHBSM
+      AKbkNkNiVk+NU+mIbPgerEB2q3JhWwQzlazKUfhDxrLtAb73tOFVn7PdyVg9zEiT
+      O7hKV+cODPf/Td67RBYPEThG2VOx9sjy2j4jPY2MnLB/yE4k537UjEE3jJBAg7vc
+      MC9mcEAiV6TDYnJvInPuAxlHFXRM9uzZwlDiTa5vzqAcO+Rgu5HEzmF9wQqn88Sy
+      LkCtNoRr9o6I+dVl+Sq92fwreU8aY6gs13zMzFtPpg==
+      -----END CERTIFICATE-----
