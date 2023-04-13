@@ -1,4 +1,4 @@
-package com.jalivv.boot.springbootgradle;
+package cn.zooways.app.springbootgradle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

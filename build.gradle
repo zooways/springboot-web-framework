@@ -1,11 +1,11 @@
 plugins {
+    id 'java'
     id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
 }
 
-group = 'com.jalivv.boot'
-version = '0.0.1-SNAPSHOT'
+group = 'cn.zooways.app'
+version = '1.0.0'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -24,15 +24,17 @@ dependencies {
     annotationProcessor('org.projectlombok:lombok',
             'org.springframework.boot:spring-boot-configuration-processor')
     implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.2'
+    implementation 'mysql:mysql-connector-java:8.0.32'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation('org.springframework.boot:spring-boot-starter-web') {
         exclude module: 'spring-boot-starter-tomcat'
     }
+    implementation 'com.auth0:java-jwt:4.0.0'
     implementation 'org.springframework.boot:spring-boot-starter-undertow'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
 
-    implementation 'mysql:mysql-connector-java:8.0.20'
 
 }
 
