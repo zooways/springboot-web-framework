@@ -9,22 +9,25 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 @Slf4j
 public class AppExceptionResolver implements HandlerExceptionResolver {
 
     @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-      log.error("{} occurred error:{}",request.getRequestURI(),ex);
+        log.error("{} occurred error:{}", request.getRequestURI(), ex);
         ModelAndView mv = new ModelAndView();
         MappingJackson2JsonView view = new MappingJackson2JsonView();
         mv.setView(view);
         if (ex instanceof BusinessException) {
             BusinessException exx = (BusinessException) ex;
+            mv.addObject("code", 400);
+            mv.addObject("msg", ex.getMessage());
             return mv;
-        }else {
+        } else {
 
             mv.addObject("code", 500);
-            mv.addObject("msg", ex.getMessage());
+            mv.addObject("msg", "server error");
             mv.setStatus(HttpStatus.resolve(500));
         }
         return mv;
