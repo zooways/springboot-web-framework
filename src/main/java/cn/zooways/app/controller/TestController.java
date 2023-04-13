@@ -1,11 +1,9 @@
 package cn.zooways.app.controller;
 
-import cn.zooways.app.PageUtils;
+import cn.zooways.app.utils.PageUtils;
 import cn.zooways.app.controller.domain.Result;
 import cn.zooways.app.entity.TestUser;
 import cn.zooways.app.service.TestUserService;
-import cn.zooways.app.service.impl.TestUserServiceImpl;
-import cn.zooways.app.token.TokenUser;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
